@@ -6,6 +6,9 @@
 
 body {
   background-color: #000;
+  color: #dcdcdc;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
 header {
@@ -23,12 +26,16 @@ header button {
   border-style: none;
 }
 
+.shaded {
+  background: rgb(38,40,42);
+  background: linear-gradient(180deg, rgba(38,40,42,1) 0%, rgba(29,32,33,1) 100%);
+}
+
 main {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
 }
 
 .meeting-wrapper {
-  margin: 10px;
   overflow-y: scroll;
   height: 95%;
   display: flex;
@@ -36,40 +43,17 @@ main {
   justify-content: center;
 }
 
-.pageturner {
-  position: absolute;
-  top: 300px;
-  color: #fff;
-}
-
-.pageturner-left {
-  left: 30px;
-}
-
-.pageturner-left i {
-  color: #7f7f7f;
-}
-
-.pageturner-right {
-  right: 47px;
-}
-
-.pageturner-right i {
-  color: #2ebaff;
-}
-
 .attendee {
   width: 250px;
   height: 150px;
   margin: 5px;
   background-color: purple;
-  border: 2px solid white;
+  border: 3px solid #000;
   position: relative;
 }
 
 .attendee span {
   background-color: rgba(0,0,0,0.4);
-  color: white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -80,7 +64,65 @@ main {
   margin-right: 5px;
 }
 
+.pageturner {
+  position: absolute;
+  top: 300px;
+}
+
+.pageturner-left {
+  left: 30px;
+}
+
+.pageturner-right {
+  right: 47px;
+}
+
+.pageturner-left i {
+  color: #7f7f7f;
+}
+
+.pageturner-right i {
+  color: #2ebaff;
+}
+
 footer {
+  padding: 5px;
   height: 50px;
-  background-color: lightcoral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer i {
+  font-size: 18px;
+  padding-bottom: 3px;
+}
+
+footer span {
+  margin-right: 30px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.right-chevron::after {
+  content:'\f077';
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  position: absolute;
+  right: -20px;
+  top: 10px;
+}
+
+.footer-options {
+}
+
+.green-icon {
+  color: #4bc800;
+}
+
+.footer-end {
+  width: 90px;
+  padding: 0 5px;
+  color: #fe564c;
 }
